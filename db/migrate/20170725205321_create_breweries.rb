@@ -8,6 +8,7 @@ class CreateBreweries < ActiveRecord::Migration[5.0]
       t.string :state
       t.text :description
       t.date :creation_date
+      t.string :url
 
       t.timestamps
     end
