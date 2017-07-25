@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+class Seed
+
+  def self.start
+    seed = Seed.new
+    seed.destroy_data
+    seed.populate_breweries
+  end
+
+  def destroy_data
+    Brewery.destroy_all
+  end
+
+  def populate_breweries
+    Brewery.create([{
+      name: "Cerebral Brewing",
+      owner:"Sean Buchan, Chris WashenBerger, Dan McGuire",
+      address: "1477 Monroe St",
+      city: "Denver",
+      state: "Colorado",
+      description:"Cerebral Brewing is a neighborhood brewery in the Bluebird District of Denver, Colorado. Our goal is to combine scientific methodology with an artistic viewpoint to create extremely drinkable beers spanning a broad spectrum of styles.",
+      creation_date: "2013/01/01",
+      url: "http://cerebralbrewing.com/"
+      }])
+
+      puts "Breweries Successfully Seeded"
+  end
+end
+
+Seed.start
