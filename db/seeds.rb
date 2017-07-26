@@ -1,3 +1,5 @@
+require 'csv'
+
 class Seed
 
   def self.start
@@ -23,6 +25,13 @@ class Seed
       }])
 
       puts "Breweries Successfully Seeded"
+  end
+
+  def populate_breweries
+    CSV.foreach("./db/data/breweries.csv", :headers => true) do |row|
+      Brewery.create!(row.to_hash)
+    end
+    puts "Breweries Successfully Seeded"
   end
 end
 
