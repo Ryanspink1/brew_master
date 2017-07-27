@@ -10,6 +10,12 @@ class Brewery < ActiveRecord::Base
 
             presence: true
 
-  validates :name, uniqueness: true
+  validates :name,
+            :owner,
+            :description,
+            :url,
+
+            uniqueness: true
+
   validates :url, :url => true
 end

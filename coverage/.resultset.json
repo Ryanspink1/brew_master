@@ -1,0 +1,30 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/RS/Desktop/postgrad_projects/beer_project/brew_master/app/models/brewery.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1501125165
+  }
+}
