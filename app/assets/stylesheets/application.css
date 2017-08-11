@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ h1 {
+   height: 10000px;
+ }
+
+.nav {
+  /*padding-top: 10px;
+  height: 200px;*/
+}
+
+.container-fluid {
+  margin-top: 10px;
+  height: 60px;
+}

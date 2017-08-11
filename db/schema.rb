@@ -10,22 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725205321) do
+ActiveRecord::Schema.define(version: 20170811200555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "breweries", force: :cascade do |t|
+    t.string   "fb_id"
     t.string   "name"
-    t.string   "owner"
+    t.string   "phone"
+    t.string   "email"
     t.string   "address"
     t.string   "city"
     t.string   "state"
+    t.text     "about"
+    t.string   "photo"
     t.text     "description"
-    t.date     "creation_date"
+    t.string   "founded"
     t.string   "url"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
+  create_table "brewery_events", force: :cascade do |t|
+    t.integer "brewery_id"
+    t.integer "event_id"
+    t.index ["brewery_id"], name: "index_brewery_events_on_brewery_id", using: :btree
+    t.index ["event_id"], name: "index_brewery_events_on_event_id", using: :btree
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "fb_id"
+    t.string "name"
+    t.string "cover"
+    t.text   "description"
+    t.string "start_time"
+    t.string "end_time"
+    t.string "place"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+  end
+
+  add_foreign_key "brewery_events", "breweries"
+  add_foreign_key "brewery_events", "events"
 end

@@ -1,21 +1,26 @@
 class Brewery < ActiveRecord::Base
-  validates :name,
-            :owner,
-            :address,
-            :city,
-            :state,
-            :description,
-            :creation_date,
-            :url,
+  has_many :brewery_events
+  has_many :events, through: :brewery_events
+  # validates :name,
+  #           :phone,
+  #           :email,
+  #           :address,
+  #           :city,
+  #           :state,
+  #           :about,
+  #           :photo,
+  #           :description,
+  #           :creation_date,
+  #           :founded,
+  #           :url,
+  #
+  #           presence: true
 
-            presence: true
-
-  validates :name,
-            :owner,
-            :description,
-            :url,
-
-            uniqueness: true
-
-  validates :url, :url => true
+  # validates :name,
+  #           :description,
+  #           :url,
+  #
+  #           uniqueness: true
+  #
+  # validates :url, :url => true
 end
