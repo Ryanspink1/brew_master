@@ -1,29 +1,25 @@
 require 'rails_helper'
 
-RSpec.describe Brewery, type: :model do
+RSpec.describe Event, type: :model do
   context "validations" do
     it { should validate_presence_of(:fb_id)}
     it { should validate_presence_of(:name)}
-    it { should validate_presence_of(:phone)}
-    it { should validate_presence_of(:email)}
+    it { should validate_presence_of(:cover)}
+    it { should validate_presence_of(:description)}
+    it { should validate_presence_of(:start_time)}
+    it { should validate_presence_of(:end_time)}
+    it { should validate_presence_of(:place)}
     it { should validate_presence_of(:address)}
     it { should validate_presence_of(:city)}
     it { should validate_presence_of(:state)}
-    it { should validate_presence_of(:about)}
-    it { should validate_presence_of(:photo)}
-    it { should validate_presence_of(:founded)}
-    it { should validate_presence_of(:description)}
     it { should validate_presence_of(:created_at)}
-    it { should validate_presence_of(:url)}
 
-    it { is_expected.to validate_uniqueness_of(:name)}
     it { is_expected.to validate_uniqueness_of(:fb_id)}
     it { is_expected.to validate_uniqueness_of(:description)}
-    it { is_expected.to validate_uniqueness_of(:url)}
   end
 
   context "relationships" do
     it { should have_many(:brewery_events) }
-    it { should have_many(:events) }
+    it { should have_many(:breweries) }
   end
 end
