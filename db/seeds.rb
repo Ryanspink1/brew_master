@@ -312,36 +312,20 @@ class Seed
       "WeldWerks Brewing Co" => 447933885339603,
       "West Flanders Brewing Co." => 343712809037994,
       "Wild Woods Brewery" => 281478828618033,
-      "Zephyr Brewing Co" => 612432528777314}
+      "Zephyr Brewing Co" => 612432528777314,
+      "Gunbarrel Brewing CO" => 414035545366325}
   end
 
   def destroy_data
     Brewery.destroy_all
-  end
+  end 
 
-  # def populate_breweries
-  #   Brewery.create([{
-  #     name: "Cerebral Brewing",
-  #     owner:"Sean Buchan, Chris WashenBerger, Dan McGuire",
-  #     address: "1477 Monroe St",
-  #     city: "Denver",
-  #     state: "Colorado",
-  #     description:"Cerebral Brewing is a neighborhood brewery in the Bluebird District of Denver, Colorado. Our goal is to combine scientific methodology with an artistic viewpoint to create extremely drinkable beers spanning a broad spectrum of styles.",
-  #     creation_date: "2013/01/01",
-  #     url: "http://cerebralbrewing.com/"
-  #     }])
-  #
-  #     puts "Breweries Successfully Seeded"
-  # end
-  #
   # def populate_breweries
   #   CSV.foreach("./db/data/breweries.csv", :headers => true) do |row|
   #     Brewery.create!(row.to_hash)
   #   end
   #   puts "Breweries Successfully Seeded"
   # end
-
-
 
   def populate_breweries
     @breweries.each do |brewery, id|
