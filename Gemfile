@@ -34,6 +34,7 @@ gem 'awesome_print'
 gem 'omniauth-facebook'
 gem "koala", "~> 1.10.0rc"
 gem 'pry'
+gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
