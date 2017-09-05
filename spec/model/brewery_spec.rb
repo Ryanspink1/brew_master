@@ -21,4 +21,9 @@ RSpec.describe Brewery, type: :model do
     it { is_expected.to validate_uniqueness_of(:description)}
     it { is_expected.to validate_uniqueness_of(:url)}
   end
+
+  context "relationships" do
+    it { should have_many(:brewery_events) }
+    it { should have_many(:events) }
+  end
 end
