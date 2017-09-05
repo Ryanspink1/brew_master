@@ -31,8 +31,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'valid_url'
 gem 'awesome_print'
-gem 'omniauth-facebook'
-gem "koala", "~> 1.10.0rc"
+# gem 'omniauth-facebook'
+# gem "koala", "~> 1.10.0rc"
 gem 'pry'
 gem 'figaro'
 
