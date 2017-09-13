@@ -35,6 +35,7 @@ gem 'awesome_print'
 # gem "koala", "~> 1.10.0rc"
 gem 'pry'
 gem 'figaro'
+gem 'faraday'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
