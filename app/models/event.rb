@@ -4,20 +4,18 @@ class Event < ActiveRecord::Base
   validates :name,
             :fb_id,
             :cover,
-            :address,
-            :city,
-            :state,
+            :description,
             :start_time,
             :end_time,
             :place,
-            :cover,
-            :description,
-            :created_at,
+            :address,
+            :city,
+            :state,
+            :brewery_id,
 
             presence: true
 
   validates :fb_id,
-            :description,
 
             uniqueness: true
 end

@@ -13,7 +13,6 @@ RSpec.describe Brewery, type: :model do
     it { should validate_presence_of(:photo)}
     it { should validate_presence_of(:founded)}
     it { should validate_presence_of(:description)}
-    it { should validate_presence_of(:created_at)}
     it { should validate_presence_of(:url)}
 
     it { is_expected.to validate_uniqueness_of(:name)}

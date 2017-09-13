@@ -12,7 +12,6 @@ class Brewery < ActiveRecord::Base
             :photo,
             :founded,
             :description,
-            :created_at,
             :url,
 
             presence: true
