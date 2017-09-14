@@ -40,6 +40,7 @@ class SeedEvent
          BreweryEvent.find_or_create_by(brewery_id: brewery.id, event_id: Event.where(fb_id: event[:id]).first.id)
       else
         brewery.events.create(fb_id:       event[:id],
+
                               name:        event[:name],
                               cover:       event[:cover][:source],
                               description: event[:description],
@@ -48,7 +49,8 @@ class SeedEvent
                               place:       event[:place][:name],
                               address:     event[:place][:location][:street],
                               city:        event[:place][:location][:city],
-                              state:       event[:place][:location][:state])
+                              state:       event[:place][:location][:state],
+                              brewery_id:  brewery.id.to_s)
       end
      puts "created #{event[:name]}!"
     end
