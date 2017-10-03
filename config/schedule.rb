@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 10.minutes do
-  rake "db:seed:seed_event"
-end
+# every 10.minutes do
+#   rake "db:seed:seed_event"
+# end

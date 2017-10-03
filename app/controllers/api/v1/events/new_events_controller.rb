@@ -1,6 +1,6 @@
 class Api::V1::Events::NewEventsController < ApplicationController
 
-  def new_events
-    render json: Event.where(created_at: (Time.now - 24.hours)..Time.now)
+  def index
+    render json: Event.new_events
   end
 end
