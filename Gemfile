@@ -36,7 +36,7 @@ gem 'awesome_print'
 gem 'pry'
 gem 'figaro'
 gem 'faraday'
-
+gem "font-awesome-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

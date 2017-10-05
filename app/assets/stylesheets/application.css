@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
  h1 {
@@ -26,4 +27,70 @@
 .container-fluid {
   margin-top: 10px;
   height: 60px;
+}
+
+.new-events {
+  margin-top: 100px;
+}
+
+#new-event-heading{
+  text-align: center;
+}
+
+#new-event-header{
+  margin-bottom: 20px;
+  border-style: ridge;
+}
+
+#new-event-list{
+  max-height: 600px;
+  overflow-y:scroll;
+}
+
+#new-event-column{
+  border-style: solid;
+  border-color: #19334d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#new-event-container{
+  margin-bottom: 30px;
+}
+
+#current-event-heading{
+  text-align: center;
+}
+
+#current-event-header{
+  margin-bottom: 20px;
+  border-style: ridge;
+}
+#current-event-column{
+  border-style: solid;
+  border-color: #19334d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#current-event-container{
+  margin-top: 30px;
+}
+
+#current-event-list{
+  max-height: 600px;
+  overflow-y:scroll;
+}
+
+.list-group-item{
+  border-style: solid;
+  border-color: #19334d;
+}
+
+#date-navigation{
+  text-align: center;
+}
+
+#current-event-date-header-capsule{
+  text-align: center;
 }
