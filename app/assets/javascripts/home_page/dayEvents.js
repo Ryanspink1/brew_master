@@ -42,7 +42,7 @@ function getModifiedDateEvents(){
   $.ajax({
     url:  'http://localhost:3000/api/v1/events/modified_date_events',
     type: 'get',
-    data: {date:currentEventDate.date.getTime()/1000},
+    data: {date: currentEventDate.date.getTime()/1000},
     success: function(data){
       clearCurrentData()
       populateNewEvents(data, "current")}
