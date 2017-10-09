@@ -14,12 +14,18 @@
  *= require_self
  *= require font-awesome
  */
+ body{
+   background-color: #EDEFF0;
+   position: relative;
+ }
 
  h1 {
    height: 10000px;
  }
 
-.nav {
+nav {
+  border-bottom: 1px;
+  border-bottom-style: solid;
   /*padding-top: 10px;
   height: 200px;*/
 }
@@ -93,4 +99,50 @@
 
 #current-event-date-header-capsule{
   text-align: center;
+}
+
+.event{
+  margin-top: 100px;
+}
+
+#event-show-header-column{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 7px 7px 0px 0px;
+  text-align: center;
+  font-family: palatino;
+  padding-top: 10px;
+}
+
+#event-show-picture{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  /*border-bottom-style: solid;*/
+  text-align: center;
+}
+
+#event-show-location-column{
+  background-color: white;
+  border-top-style: solid;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+}
+
+#event-show-location{
+  font-family: palatino;
+}
+
+#event-show-details{
+  background-color: white;
+  font-family: palatino;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
 }
