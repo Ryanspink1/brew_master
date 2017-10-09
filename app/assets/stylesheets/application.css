@@ -45,7 +45,8 @@ nav {
 
 #new-event-header{
   margin-bottom: 20px;
-  border-style: ridge;
+  border-style: solid;
+  background-color: white;
 }
 
 #new-event-list{
@@ -58,6 +59,7 @@ nav {
   border-color: #19334d;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #19334d;
 }
 
 #new-event-container{
@@ -91,6 +93,7 @@ nav {
 .list-group-item{
   border-style: solid;
   border-color: #19334d;
+  font-size: 12px;
 }
 
 #date-navigation{
@@ -145,4 +148,8 @@ nav {
   border-left-style:solid;
   border-right-style: solid;
   border-bottom-style: solid;
+}
+
+#homePageCarousel{
+  /*max-height: 600px;*/
 }
