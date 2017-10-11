@@ -106,6 +106,7 @@ nav {
 
 .event{
   margin-top: 100px;
+  font-size: 12px;
 }
 
 #event-show-header-column{
@@ -118,38 +119,90 @@ nav {
   text-align: center;
   font-family: palatino;
   padding-top: 10px;
+  border-width: 1px;
+  border-color: #D5D7DB;
 }
 
-#event-show-picture{
+/*#event-show-picture{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  text-align: center;
+}*/
+
+#event-show-picture-column{
   background-color: white;
   border-left-style:solid;
   border-right-style: solid;
   /*border-bottom-style: solid;*/
   text-align: center;
+  border-width: 1px;
+  border-color: #D5D7DB;
 }
 
+/*#event-show-other-events{
+  background-color: white;
+  border-style: solid;
+  border-radius: 7px 7px 7px 7px;
+  height:350px;
+}
+#event-show-other-events-header{
+  text-align: center;
+  padding-top: 10px;
+}*/
 #event-show-location-column{
   background-color: white;
   border-top-style: solid;
   border-left-style:solid;
   border-right-style: solid;
   border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
 }
 
 #event-show-location{
   font-family: palatino;
 }
 
-#event-show-details{
+/*#event-show-details{
   background-color: white;
   font-family: palatino;
   padding-left: 10px;
   padding-right: 10px;
   border-left-style:solid;
   border-right-style: solid;
-  border-bottom-style: solid;
+}*/
+
+#event-show-details-column{
+  background-color: white;
+  font-family: palatino;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  /*border-bottom-style: solid;*/
 }
 
 #homePageCarousel{
   /*max-height: 600px;*/
+}
+
+#event-show-footer-column{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 0px 0px 7px 7px;
+  font-family: palatino;
+  padding-top: 10px;
+  border-width: 1px;
+  border-color: #D5D7DB;
+}
+
+#event-description-paragraph{
+margin: 0px;
+padding: 0px;
 }

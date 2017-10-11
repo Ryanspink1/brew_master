@@ -1,43 +1,66 @@
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.6; user-scalable=0;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=.8, user-scalable=0">
+<script>
+  $(document).ready(getEventShow())
+</script>
 <div class="event">
   <div class="container" id="event-container">
     <div class="row">
       <div class="col">
       </div>
-      <div class="col-7 " id="event-show-header-column">
+      <div class="col-8 " id="event-show-header-column">
         <div id="event-show-header">
-          <h2><%= @event.name %></h2>
         </div>
       </div>
       <div class="col">
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-7" id="event-show-picture-column">
+    <div class="row justify-content-center" style="width:`auto`">
+      <!-- <div class="col-3" id="event-show-other-events-column">
+        <div id="event-show-other-events">
+          <div id="event-show-other-events-header">
+            Other Events by
+          </div>
+          <div id="event-show-other-events-list">
+          </div>
+        </div>
+      </div> -->
+      <div class="col-8" id="event-show-picture-column">
         <div id="event-show-picture">
-          <img id="event-cover-image" src='<%=@event.cover%>' class="img-thumbnail" style="height:350px;">
         </div>
       </div>
+      <!-- <div class="col-3">
+      </div> -->
     </div>
     <div class="row justify-content-center">
-      <div class="col-7" id="event-show-location-column">
+      <div class="col-8" id="event-show-location-column">
           <div id="event-show-location">
             <br>
-            <span id="event-show-location-place"><strong>Place:</strong> <%=@event.place%></strong>
+            <span id="event-show-location-place"></span>
             <br>
-            <span id="event-show-location-address"><strong>Address:</strong> <%=@event.address%> <%= @event.city%>, <%=@event.state  %></strong>
+            <span id="event-show-location-start-time"></span>
               <br>
-            <span id="event-show-location-brewery"><strong>Brewery:</strong> <%= @event.breweries[0].name %></strong>
+            <span id="event-show-location-end-time"></span>
             <br><br>
           </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-7" id="event-show-details-column">
+      <div class="col-8" id="event-show-details-column">
         <div id="event-show-details">
           <br>
           <strong>Description:</strong><br>
-          <span id="event-show-description"><p style="text-indent: 30px;"><%= @event.description %></p></span>
+          <span id="event-show-description"></span>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8" id="event-show-footer-column">
+        <div id="event-show-footer">
+          <br>
+          <span id="event-show-location-address"></span>
+          <br>
+          <br>
         </div>
       </div>
     </div>
