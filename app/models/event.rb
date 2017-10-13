@@ -1,4 +1,4 @@
-class Event < ActiveRecord::Base
+class Event < ApplicationRecord
   has_many :brewery_events
   has_many :breweries, through: :brewery_events
   has_many :user_events
