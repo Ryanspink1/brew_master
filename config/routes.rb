@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   root to: 'home#show', as: 'home'
 
+  namespace :admin do
+    get 'dashboard', to: 'dashboard#show'
+  end
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+  get '/dashboard', to: 'users#show'
+
+  resources :users, only: [:new, :create]
+
+  resources :events, only: [:show, :index]
+
   namespace :api do
     namespace :v1 do
       namespace :events do
@@ -12,7 +26,4 @@ Rails.application.routes.draw do
       resources :events, only: [:show]
     end
   end
-
-  resources :events, only: [:show]
-
 end
