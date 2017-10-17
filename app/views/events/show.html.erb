@@ -2,6 +2,7 @@
 <script>
   $(document).ready(getEventShow())
 </script>
+<%= render 'navbar/navbar' %>
 <div class="event">
   <div class="container" id="event-container">
     <div class="row">
@@ -15,21 +16,10 @@
       </div>
     </div>
     <div class="row justify-content-center" style="width:`auto`">
-      <!-- <div class="col-3" id="event-show-other-events-column">
-        <div id="event-show-other-events">
-          <div id="event-show-other-events-header">
-            Other Events by
-          </div>
-          <div id="event-show-other-events-list">
-          </div>
-        </div>
-      </div> -->
       <div class="col-8" id="event-show-picture-column">
         <div id="event-show-picture">
         </div>
       </div>
-      <!-- <div class="col-3">
-      </div> -->
     </div>
     <div class="row justify-content-center">
       <div class="col-8" id="event-show-location-column">

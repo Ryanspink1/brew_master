@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-  <a class="navbar-brand" href="/">Brew O'Clock</a>
+<nav id="event-navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+  <a id="navbar-name" class="navbar-brand" href="/">Brew O'Clock</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,12 +7,15 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="/">Dashboard <span class="sr-only">(current)</span></a>
-      </li
-      <li class="nav-item">
-        <a class="nav-link" href="/events">Events</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/breweries">Breweries</a>
+      </li>
+      <li class="nav-item">
+        <a id="new-events-nav-link" class="nav-link" href="#new-event-top">New Events</a>
+      </li>
+      <li class="nav-item">
+        <a id="all-events-nav-link" class="nav-link" href="#current-event-top">All Events</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">

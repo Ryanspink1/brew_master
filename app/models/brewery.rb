@@ -1,6 +1,8 @@
-class Brewery < ActiveRecord::Base
+class Brewery < ApplicationRecord
   has_many :brewery_events
   has_many :events, through: :brewery_events
+  has_many :favorites
+  has_many :users, through: :favorites
   validates :name,
             :fb_id,
             :phone,

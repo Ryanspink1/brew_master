@@ -1,0 +1,3 @@
+function debugging(data){
+  debugger;
+}
