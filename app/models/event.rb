@@ -41,4 +41,8 @@ class Event < ApplicationRecord
   def self.modified_date_events(date)
     Event.where('start_time < ? AND end_time >?',Time.at(date.to_f).end_of_day, Time.at(date.to_f).beginning_of_day).order(:end_time)
   end
+
+  def self.get_event(params)
+    find(params[:id])
+  end
 end

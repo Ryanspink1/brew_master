@@ -31,6 +31,8 @@
 nav {
   border-bottom: 1px;
   border-bottom-style: solid;
+  border-color: #D5D7DB;
+  box-shadow: 3px 1px 10px #848f94;
 }
 
 #navbar-name{
@@ -52,6 +54,8 @@ nav {
 #new-event-header{
   margin-bottom: 20px;
   border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
   background-color: white;
 }
 
@@ -62,7 +66,9 @@ nav {
 
 #new-event-column{
   border-style: solid;
-  border-color: #19334d;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  box-shadow: 3px 3px 7px #848f94;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: white;
@@ -78,11 +84,15 @@ nav {
 
 #current-event-header{
   margin-bottom: 20px;
-  border-style: ridge;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
 }
 #current-event-column{
   border-style: solid;
-  border-color: #19334d;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  box-shadow: 3px 3px 7px #848f94;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: white;
@@ -99,12 +109,15 @@ nav {
 
 .list-group-item{
   border-style: solid;
-  border-color: #19334d;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  box-shadow: 3px 3px 7px #848f94;
   font-size: 12px;
 }
 
 #date-navigation{
   text-align: center;
+  cursor: pointer;
 }
 
 #current-event-date-header-capsule{
@@ -112,8 +125,12 @@ nav {
 }
 
 .event{
-  margin-top: 100px;
+  margin-top: 10px;
   font-size: 14px;
+}
+
+#event-container{
+  /*box-shadow: 2px 1px 10px black;*/
 }
 
 #event-show-header-column{
@@ -128,6 +145,7 @@ nav {
   padding-top: 10px;
   border-width: 1px;
   border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
 }
 
 /*#event-show-picture{
@@ -144,7 +162,8 @@ nav {
   /*border-bottom-style: solid;*/
   text-align: center;
   border-width: 1px;
-  border-color: #D5D7DB;
+  border-color: #D5D7DB;;
+  box-shadow: 3px 3px 7px #848f94;
 }
 #event-show-location-column{
   background-color: white;
@@ -154,6 +173,7 @@ nav {
   border-bottom-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
 }
 
 #event-show-location{
@@ -169,6 +189,7 @@ nav {
   border-right-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
   /*border-bottom-style: solid;*/
 }
 
@@ -187,6 +208,7 @@ nav {
   padding-top: 10px;
   border-width: 1px;
   border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
 }
 
 #event-description-paragraph{
@@ -199,4 +221,15 @@ a.anchor {
   position: relative;
   top: -80px;
   /*visibility: hidden;*/
+}
+
+.flash-message{
+  position:relative;
+  margin-top: 65px;
+  /*z-index: -1;*/
+}
+
+#flash-message-insert{
+  text-align: center;
+  z-index: -1;
 }
