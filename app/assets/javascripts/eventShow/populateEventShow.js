@@ -22,7 +22,6 @@ function getSanitationInfo(eventInfo){
 function sanitize(eventInfo, sanitationInfo){
   var sanitationIds = []
   sanitationInfo.forEach(function(record){sanitationIds.push(record.id)})
-
   if (sanitationIds.includes(eventInfo.id)) {
     $("#add-event-to-list-button").css({"display":"none"})
     $("#remove-event-from-list-button").css({"display":"inline"})

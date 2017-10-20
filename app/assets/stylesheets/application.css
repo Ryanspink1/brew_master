@@ -233,3 +233,49 @@ a.anchor {
   text-align: center;
   z-index: -1;
 }
+
+#user-dashboard-events-header{
+  text-align: center;
+}
+
+#user-dashboard-events-column{
+  margin-top:0px;
+}
+
+.user-dashboard-event{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  margin-top: 10px;
+  background-color: white;
+  padding: 10px;
+
+}
+
+#user-dashboard-events-pagination{
+  text-align: center;
+}
+
+.dashboard-pagination-numbers{
+  cursor: pointer;
+}
+
+#user-dashboard-events-header{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+  border-radius: 7px 7px 0px 0px;
+}
+
+#user-dashboard-events-pagination{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+  border-radius: 0px 0px 7px 7px;
+  margin-top: 10px;
+}
