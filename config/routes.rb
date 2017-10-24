@@ -11,8 +11,9 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'users#show'
 
-  resources :users,  only: [:new, :create]
-  resources :events, only: [:show, :index]
+  resources :users,     only: [:new, :create]
+  resources :events,    only: [:show, :index]
+  resources :breweries, only: [:index]
 
   namespace :api do
     namespace :v1 do
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
       end
       resources :events,      only:  [:show]
       resources :user_events, only:  [:index, :create]
+      resources :breweries,   only:  [:index]
       resource  :user_events, only:  [:destroy]
     end
   end
