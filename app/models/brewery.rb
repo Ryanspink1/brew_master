@@ -26,4 +26,8 @@ class Brewery < ApplicationRecord
             uniqueness: true
   #
   # validates :url, :url => true
+
+  def self.get_breweries
+    all.order(:name)
+  end
 end
