@@ -1,3 +1,0 @@
-function debugging(data){
-  debugger;
-}

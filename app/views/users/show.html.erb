@@ -1,4 +1,25 @@
+<script>
+  $(document).ready(userDashboardEventsBrain(0))
+</script>
 <%= render 'navbar/navbar' %>
-
-<div id="data-container"></div>
-<div id="pagination-container"></div>
+<%= render 'flash_message/flash_message' %>
+<div class="user-dashboard-events">
+  <div class="container" id="user-dashboard-events-container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-6 rounded" id="user-dashboard-events-column">
+        <div id="user-dashboard-events-header">
+          <h2 id="user-dashboard-events-heading"><u>My Event List</u></h2>
+        </div>
+        <div id="user-dashboard-events-list">
+        </div>
+        <div id="user-dashboard-events-pagination">
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br>

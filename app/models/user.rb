@@ -11,4 +11,8 @@ class User < ApplicationRecord
   enum role:[:default, :admin]
 
   validates :email, uniqueness: true
+
+  def event_index
+    events.order(:start_time)
+  end
 end

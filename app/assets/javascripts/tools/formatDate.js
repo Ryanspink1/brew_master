@@ -5,10 +5,16 @@ function formatDate(date){
     "Aug", "Sept", "Oct",
     "Nov", "Dec"
   ];
+  var dayNames = [
+    "Mon", "Tues", "Wed",
+    "Thurs", "Fri", "Sat",
+    "Sun"
+  ]
 
   var day = date.getDate();
+  var dayIndex = date.getDay();
   var monthIndex = date.getMonth();
   var year = date.getFullYear();
 
-  return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  return dayNames[dayIndex] + " " + monthNames[monthIndex] + ' ' + day + ', ' + year;
 }
