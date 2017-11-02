@@ -30,15 +30,13 @@ function clearBreweryIndexPagination(){
 
 
 function populateBreweryIndex(page, data){
+  breweryIndexScrollToTop()
   clearBreweryIndex()
   for(i=(0+40*page);i<(39+40*page);i++){
     $("#brewery-index-table").append(
-      `<tr>
-      <th scope = "row">${data[i].name}</th>
-        <td>${data[i].address}</td>
-        <td>${data[i].city}</td>
-      </tr>
-      `
+      `<div class="brewery-index-instance" onclick=location.href="http://localhost:3000/breweries/${data[i].id}">
+          ${data[i].name}
+      </div>`
     )
   }
 }

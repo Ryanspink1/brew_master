@@ -88,6 +88,7 @@ nav {
   border-color: #D5D7DB;
   border-width: 1px;
 }
+
 #current-event-column{
   border-style: solid;
   border-color: #D5D7DB;
@@ -234,6 +235,8 @@ a.anchor {
   z-index: -1;
 }
 
+/* User Dashboard */
+
 #user-dashboard-events-header{
   text-align: center;
 }
@@ -270,6 +273,11 @@ a.anchor {
   border-radius: 7px 7px 0px 0px;
 }
 
+#user-dashboard-events-list{
+  max-height: 550px;
+  overflow-y:scroll;
+}
+
 #user-dashboard-events-pagination{
   border-style: solid;
   border-width: 1px;
@@ -278,4 +286,47 @@ a.anchor {
   background-color: white;
   border-radius: 0px 0px 7px 7px;
   margin-top: 10px;
+}
+
+/*Breweries Index*/
+
+#brewery-index-table{
+  margin-top: 10px;
+  max-height: 600px;
+  overflow-y:scroll;
+}
+
+.brewery-index-instance{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#brewery-index-table-header{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+  border-radius: 7px 7px 0px 0px;
+  text-align: center;
+}
+
+#brewery-index-pagination{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+  border-radius: 0px 0px 7px 7px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.brewery-index-pagination-numbers{
+  cursor: pointer;
 }
