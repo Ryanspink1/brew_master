@@ -1,6 +1,6 @@
 function userDashboardEventsBrain(pageNumber){
   $.ajax({
-      url: `http://localhost:3000/api/v1/user_events`,
+      url: `/api/v1/user_events`,
       type: "get",
       success: function(data){
         dashboardEventsData.response = data

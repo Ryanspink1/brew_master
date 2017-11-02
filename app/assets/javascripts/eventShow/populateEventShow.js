@@ -1,6 +1,6 @@
 function getEventShow(){
   $.ajax({
-      url: `http://localhost:3000/api/v1${window.location.pathname}`,
+      url: `/api/v1${window.location.pathname}`,
       type: 'get',
       success: function(data){
         // populateEventShow(data);
@@ -11,7 +11,7 @@ function getEventShow(){
 
 function getSanitationInfo(eventInfo){
   $.ajax({
-      url: `http://localhost:3000/api/v1/user_events`,
+      url: `/api/v1/user_events`,
       type: 'get',
       success: function(data){
         sanitize(eventInfo, data);
@@ -58,7 +58,7 @@ function populateEventShow(data){
     <i id="removeEventButton" class="fa fa-calendar-minus-o fa-lg" aria-hidden="true" onclick="addEventToList('DELETE', ${data.id})"style="cursor: pointer; cursor: hand;"></i>`
   )
   $("#event-show-description").append(
-    `<p id="event-description-paragraph" style="text-indent: 30px;">${data.description}</p>`
+    `    <span style="white-space: pre-line"><p id="event-description-paragraph">${data.description}</p></span>`
   )
   $("#event-show-location-address").append(
     `<strong>Address:</strong> ${data.address} ${data.city}, ${data.state}`

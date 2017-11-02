@@ -6,9 +6,8 @@ function formatDate(date){
     "Nov", "Dec"
   ];
   var dayNames = [
-    "Mon", "Tues", "Wed",
-    "Thurs", "Fri", "Sat",
-    "Sun"
+    "Sun", "Mon", "Tues", "Wed",
+    "Thurs", "Fri", "Sat"
   ]
 
   var day = date.getDate();

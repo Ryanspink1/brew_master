@@ -300,10 +300,13 @@ a.anchor {
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
+  /*box-shadow: 3px 3px 7px #848f94;*/
   background-color: white;
   cursor: pointer;
   margin-top: 10px;
+}
+.brewery-index-instance:hover{
+  box-shadow: 3px 3px 7px #848f94;
 }
 
 #brewery-index-table-header{
@@ -329,4 +332,274 @@ a.anchor {
 
 .brewery-index-pagination-numbers{
   cursor: pointer;
+}
+
+/*Brewery Show*/
+
+/*#brewery-show-header-column{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 7px 7px 0px 0px;
+  text-align: center;
+  font-family: palatino;
+  padding-top: 10px;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-picture-column{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  text-align: center;
+  border-width: 1px;
+  border-color: #D5D7DB;;
+  box-shadow: 3px 3px 7px #848f94;
+}
+#brewery-show-location-column{
+  background-color: white;
+  border-top-style: solid;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-location{
+  font-family: palatino;
+}
+
+#brewery-show-details-column{
+  background-color: white;
+  font-family: palatino;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-footer-column{
+  background-color: white;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-radius: 0px 0px 7px 7px;
+  font-family: palatino;
+  padding-top: 10px;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-description-paragraph{
+margin: 0px;
+padding: 0px;
+}
+*/
+
+/*NEW BREWERY SHOW*/
+
+#brewery-show-container{
+  margin-top: 5vh;
+  width:60vw;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-header{
+  padding-top:1vh;
+  border-radius: 7px 7px 0px 0px;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:#d6f1ff;
+  font-family: palatino;
+  text-align:center;
+  font-weight: bold;
+
+}
+#brewery-show-picture{
+  padding-top:1vh;
+  padding-bottom:1vh;
+  padding-right:1vh;
+  padding-left:1vh;
+  text-align:center;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:white;
+}
+#brewery-show-info{
+
+}
+
+#brewery-show-events{
+
+}
+
+#brewery-show-events-containter{
+  width:60vw;
+  margin-top:5vh;
+  text-align:center;
+}
+
+#brewery-show-events-header{
+  padding-top:1vh;
+  border-radius: 7px 7px 0px 0px;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:#d6f1ff;
+  font-family: palatino;
+  font-size:23px;
+  text-align:center;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-events-body{
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:white;
+  font-family: palatino;
+  text-align:center;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-event-instances-container{
+  /*width:42vw;*/
+  max-height:50vh;
+  overflow-y:scroll;
+  padding-bottom:5vh;
+}
+
+.brewery-show-event-instance{
+  width: 40vw;
+  margin-top:5vh;
+  border-radius: 7px 7px 7px 7px;
+  background-color:white;
+}
+.brewery-show-event-instance:hover{
+  background-color:grey;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+.brewery-show-event-instance-body{
+  max-height:12vh;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:white;
+  border-radius: 0px 0px 7px 7px;
+  padding-left:1vw;
+  padding-right:1vw;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  background-color: white;
+  opacity: .6;
+  filter: alpha(opacity=60);
+  font-weight: bold;
+  color:black;
+}
+
+.brewery-show-event-instance-header{
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:#dbf0fa;
+  border-radius: 7px 7px 0px 0px;
+}
+
+#brewery-show-info-containter{
+  /*margin-top: 5vh;*/
+  /*max-height:50vh;*/
+  /*padding-bottom: 2vh;*/
+  width: 60vw;
+}
+#brewery-show-info-content{
+  margin-top: 5vh;
+  /*max-height:50vh;*/
+  width: 60vw;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+#brewery-show-info-body{
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:white;
+  border-radius: 0px 0px 7px 7px;
+  padding-left:1vw;
+  padding-right:1vw;
+  padding-top:1vh;
+  padding-bottom:3vh;
+  margin-bottom:10vh;
+}
+#brewery-show-info-header{
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:#d6f1ff;
+  border-radius: 7px 7px 0px 0px;
+  text-align: center;
+  font-size: 23px;
+  font-family: palatino;
+}
+
+.brewery-show-info-instance{
+  width: 40vw;
+  margin-top:2vh;
+  border-radius: 7px 7px 7px 7px;
+  background-color:white;
+}
+
+.brewery-show-info-instance-header{
+  font-size: 18px;
+  font-family: palatino;
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color:#dbf0fa;
+  border-radius: 7px 7px 7px 7px;
+}
+.brewery-show-info-instance-header:hover{
+  cursor:pointer;
+  background-color:#8fd1f0;
+}
+.brewery-show-info-instance-header.active{
+  border-radius: 7px 7px 0px 0px;
+  background-color: #0f5270
+}
+
+
+.brewery-show-info-instance-body{
+  /*max-height:12vh;*/
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  border-radius: 0px 0px 7px 7px;
+  padding-left:2vw;
+  padding-right:2vw;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  font-family: palatino;
+  font-size: 16px;
+  background-color: white;
+  font-weight: bold;
+  color:black;
+  max-height: 35vh;
+  overflow-y: scroll;
 }

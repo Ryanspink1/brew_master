@@ -1,0 +1,57 @@
+<%= render 'navbar/navbar' %>
+<div class="row justify-content-center">
+  <div class="col">
+  </div>
+  <div class="col">
+    <div id="brewery-show-container">
+      <div id="brewery-show-header">
+      </div>
+      <div id="brewery-show-picture">
+      </div>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<div class="row jutify-content-center">
+  <div class="col">
+  </div>
+  <div class="col">
+    <div id="brewery-show-events-containter">
+      <div id="brewery-show-events-header">
+        <strong>Events</strong>
+      </div>
+      <div id="brewery-show-events-body">
+        <div id="brewery-show-event-instances-container">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<div class="row jutify-content-center">
+  <div class="col">
+  </div>
+  <div class="col">
+    <div id="brewery-show-info-content">
+      <div id="brewery-show-info-header">
+        <strong>Info</strong>
+      </div>
+      <div id="brewery-show-info-body">
+        <div id="brewery-show-info-container">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<script>
+  $(document).ready(
+    function(){
+    getBreweryShow()
+        getBreweryEvents()
+    }
+  )
+</script>

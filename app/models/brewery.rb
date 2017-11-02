@@ -30,4 +30,13 @@ class Brewery < ApplicationRecord
   def self.get_breweries
     all.order(:name)
   end
+
+  def self.get_brewery(id)
+    find(id)
+  end
+
+  def self.get_events(id)
+    brewery = get_brewery(id)
+    brewery.events.where("end_time > ?", Time.now).order(:end_time)
+  end
 end
