@@ -290,44 +290,67 @@ a.anchor {
 
 /*Breweries Index*/
 
+#brewery-index-table-container{
+  margin-top: 5vh;
+  width:60vw;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 3px 3px 7px #848f94;
+  margin-bottom: 5vh;
+}
+
 #brewery-index-table{
-  margin-top: 10px;
+  padding-top:1vh;
+  padding-bottom:2vh;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #D5D7DB;
   max-height: 600px;
   overflow-y:scroll;
+  background-color: white;
 }
 
 .brewery-index-instance{
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  /*box-shadow: 3px 3px 7px #848f94;*/
-  background-color: white;
+  border-radius: 7px 7px 7px 7px;
+  background-color: #e6e6e6;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 1vh;
+  width:40vw;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  text-align:center;
 }
 .brewery-index-instance:hover{
   box-shadow: 3px 3px 7px #848f94;
+  background-color: #bfbfbf;
+  color:white;
 }
 
 #brewery-index-table-header{
+  padding-top:2vh;
+  padding-bottom: 1vh;
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-  background-color: white;
+  background-color: #d6f1ff;;
   border-radius: 7px 7px 0px 0px;
   text-align: center;
+  font-family: palatino;
+  font-size: 23px;
+  font-weight: bold;
 }
 
 #brewery-index-pagination{
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
   background-color: white;
   border-radius: 0px 0px 7px 7px;
-  margin-top: 10px;
   text-align: center;
+  font-family: palatino;
+  font-size:18px;
 }
 
 .brewery-index-pagination-numbers{

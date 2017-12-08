@@ -1,25 +1,30 @@
+var allBreweries = {
+  breweries: null
+}
+
 function getBreweryIndex(pageNumber){
   $.ajax({
     url: `/api/v1/breweries`,
     success: function(data){
-      breweryIndexPagination(pageNumber, data)
+      allBreweries.breweries = data
+      breweryIndexPagination(pageNumber)
     }
   })
 }
 
-function breweryPageCount(number){
-  return Math.ceil(number.length / 40)
+function breweryPageCount(){
+  return Math.ceil(allBreweries.breweries.length / 40)
 }
 
-function breweryIndexPagination(pageNumber, data){
+function breweryIndexPagination(pageNumber){
   clearBreweryIndexPagination()
-  var numberOfPages = breweryPageCount(data)
+  var numberOfPages = breweryPageCount()
   for (i=0;i<numberOfPages;i++){
     $("#brewery-index-pagination").append(`
-      <span class="brewery-index-pagination-numbers" onclick="scrollToTop(); getBreweryIndex(${(i)});">${i+1}</span>`
+      <span class="brewery-index-pagination-numbers" onclick="scrollToTop(); breweryIndexPagination(${(i)});">${i+1}</span>`
     )
   }
-  populateBreweryIndex(pageNumber, data)
+  populateBreweryIndex(pageNumber)
 }
 
 function clearBreweryIndex(){
@@ -30,14 +35,24 @@ function clearBreweryIndexPagination(){
 }
 
 
-function populateBreweryIndex(page, data){
+function populateBreweryIndex(page){
   breweryIndexScrollToTop()
   clearBreweryIndex()
   for(i=(0+40*page);i<(39+40*page);i++){
     $("#brewery-index-table").append(
-      `<div class="brewery-index-instance" onclick=location.href="/breweries/${data[i].id}">
-          ${data[i].name}
-      </div>`
+      `
+        <div class="row justify-content-center">
+          <div class="col">
+          </div>
+          <div class="col">
+            <div class="brewery-index-instance" onclick=location.href="/breweries/${allBreweries.breweries[i].id}">
+                ${allBreweries.breweries[i].name}
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      `
     )
   }
 }
