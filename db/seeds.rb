@@ -9,6 +9,7 @@ class Seed
   end
 
   def initialize
+    @token = ENV["FACEBOOK_TOKEN"]
     @breweries = {
       "Avalanche Brewing Co" => 36572226900,
       "Avery Brewing Company" => 129355431997,
@@ -223,7 +224,7 @@ class Seed
       "Red Leg Brewing Company" => 290972717668895,
       "Suds Brothers Brewery" => 318191508270122,
       "Dostal Alley Brewpub & Casino" => 363384231069,
-      "Shine Brewing Company" => 459106734289220,
+      # "Shine Brewing Company" => 459106734289220,
       "Gold Camp Brewing Company" => 914106935272322,
       "Wibby Brewing" => 741607399195545,
       "Denver Beer Company" => 172134696162075,
@@ -313,12 +314,13 @@ class Seed
       "West Flanders Brewing Co." => 343712809037994,
       "Wild Woods Brewery" => 281478828618033,
       "Zephyr Brewing Co" => 612432528777314,
-      "Gunbarrel Brewing CO" => 414035545366325}
+      # "Gunbarrel Brewing CO" => 414035545366325
+    }
   end
 
   def destroy_data
-    Brewery.destroy_all
-  end 
+    # Brewery.destroy_all
+  end
 
   # def populate_breweries
   #   CSV.foreach("./db/data/breweries.csv", :headers => true) do |row|
@@ -329,9 +331,11 @@ class Seed
 
   def populate_breweries
     @breweries.each do |brewery, id|
-      response = Faraday.get("https://graph.facebook.com/v2.10/#{id}?fields=about%2Ccover%2Cdescription%2Cemails%2Cfounded%2Cgeneral_info%2Chours%2Clocation%2Cphone%2Cname%2Cwebsite&access_token=EAACS5p8zSNkBAMnNsEjrlnCikqPCV0ctmKkFz9cCY5paSQeu5Kms9jTYDlTP4fVWqvSopaxMid8w9PkZAtXCQ6O0wLPqkoXvcZA4UPgVtCA9Acp5CNehkLyIRq4qyfka9uRZCZACCQdd9NkTRNlHjTFwJEne1VwCsZCuFrOlsRAfJSZBq9ZAQrPnQHUuy8tVRBYHwdhaFjgtAZDZD")
+      response = Faraday.get("https://graph.facebook.com/v2.10/#{id}?fields=about%2Ccover%2Cdescription%2Cemails%2Cfounded%2Cgeneral_info%2Chours%2Clocation%2Cphone%2Cname%2Cwebsite&access_token=#{@token}")
       parsed = JSON.parse(response.body, symbolize_names: true)
-      Brewery.find_or_create_by([{
+      # Brewery.find_or_create_by([{
+      brewery = Brewery.find_by(fb_id: parsed[:id])
+      brewery.update_attributes(
                      name:        parsed[:name],
                      fb_id:       parsed[:id],
                      phone:       parsed[:phone],
@@ -342,8 +346,10 @@ class Seed
                      about:       parsed[:about],
                      description: parsed[:description],
                      photo:       parsed[:cover][:source],
-                     url:         parsed[:website]
-                     }])
+                     url:         parsed[:website],
+                     zip_code:    parsed[:location][:zip]
+                     )
+        brewery.save
       puts "created #{parsed[:name]} brewery!"
     end
     puts "brewery seed complete!"

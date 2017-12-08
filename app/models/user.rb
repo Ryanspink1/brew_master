@@ -13,6 +13,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
 
   def event_index
-    events.order(:start_time)
+    events.where("end_time > ?", Time.now).order(:start_time)
   end
 end

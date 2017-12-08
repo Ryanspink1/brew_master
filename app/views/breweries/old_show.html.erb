@@ -1,0 +1,64 @@
+<%= render 'navbar/navbar' %>
+<script>
+  $(document).ready(getBreweryShow())
+</script>
+<div class="brewery">
+  <div class="container" id="brewery-container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col-8 " id="brewery-show-header-column">
+        <div id="brewery-show-header">
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <div class="row justify-content-center" style="width:`auto`">
+      <div class="col-8" id="brewery-show-picture-column">
+        <div id="brewery-show-picture">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8" id="brewery-show-location-column">
+          <div id="brewery-show-location">
+            <br>
+            <span id="brewery-show-location-place"></span>
+            <br>
+            <span id="brewery-show-location-start-time"></span>
+              <br>
+            <span id="brewery-show-location-end-time"></span>
+            <br>
+            <span id="add-brewery-to-list-button"></span>
+            <span id="remove-brewery-from-list-button"></span>
+            <br><br>
+          </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8" id="brewery-show-details-column">
+        <div id="brewery-show-details">
+          <br>
+          <strong>About:</strong><br>
+          <span id="brewery-show-about"></span>
+          <br>
+          <strong>Description:</strong><br>
+          <span id="brewery-show-description"></span>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8" id="brewery-show-footer-column">
+        <div id="brewery-show-footer">
+          <br>
+          <span id="brewery-show-location-address"></span>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

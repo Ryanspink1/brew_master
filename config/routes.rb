@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :users,     only: [:new, :create]
   resources :events,    only: [:show, :index]
-  resources :breweries, only: [:index]
+  resources :breweries, only: [:index, :show]
 
   namespace :api do
     namespace :v1 do
@@ -22,10 +22,11 @@ Rails.application.routes.draw do
         get "/current_events",       to: "current_events#index"
         get "/today",                to: "day_events#index"
         get "/modified_date_events", to: "modified_date_events#index"
+        get "/brewery_events",       to: "brewery_events#index"
       end
       resources :events,      only:  [:show]
       resources :user_events, only:  [:index, :create]
-      resources :breweries,   only:  [:index]
+      resources :breweries,   only:  [:index, :show]
       resource  :user_events, only:  [:destroy]
     end
   end
