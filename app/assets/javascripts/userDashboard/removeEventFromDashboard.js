@@ -1,17 +1,32 @@
-function addEventToListFromDashboard(method, event_id){
+function addEventToListFromDashboard(method, event_id, i){
   $.ajax({
       url: `/api/v1/user_events`,
       type: method,
       data:{event_id: event_id},
       success: function(data){
         flash(method)
-        resetDashboard()
+        resetDashboard(i)
       }
     })
 }
 
-function resetDashboard(){
+// function removeEventFromDashboard(button){
+//   button.parentElement.parentElement.remove()
+// }
+
+function resetDashboard(i){
+  updateDashboardEventsData(i)
+  repopulateEvents()
+}
+
+function clearUserDashboardEvents(){
   $("#user-dashboard-events-list").empty()
-  $("#user-dashboard-events-pagination").empty()
-  userDashboardEventsBrain(0)
+}
+
+function updateDashboardEventsData(i){
+  dashboardEventsData.response.splice(i, 1)
+}
+
+function repopulateEvents(){
+  populateUserDashboardEvents(0)
 }

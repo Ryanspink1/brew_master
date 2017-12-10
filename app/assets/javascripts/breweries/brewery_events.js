@@ -49,7 +49,8 @@ function populateBreweryEvents(){
               </span>
             </div>
             <div class="brewery-show-event-instance-body">
-            ${event.description.substring(0,150)}...
+            <span>${formatDate(new Date(event.start_time))}-${formatDate(new Date(event.end_time))}</span>
+            <p>${event.description.substring(0,150)}...</p>
             </div>
           </div>
         </div>
