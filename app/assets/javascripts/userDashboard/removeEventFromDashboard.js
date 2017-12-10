@@ -10,10 +10,6 @@ function addEventToListFromDashboard(method, event_id, i){
     })
 }
 
-// function removeEventFromDashboard(button){
-//   button.parentElement.parentElement.remove()
-// }
-
 function resetDashboard(i){
   updateDashboardEventsData(i)
   repopulateEvents()
