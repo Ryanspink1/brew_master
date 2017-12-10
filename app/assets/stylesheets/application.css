@@ -149,13 +149,6 @@ nav {
   box-shadow: 3px 3px 7px #848f94;
 }
 
-/*#event-show-picture{
-  background-color: white;
-  border-left-style:solid;
-  border-right-style: solid;
-  text-align: center;
-}*/
-
 #event-show-picture-column{
   background-color: white;
   border-left-style:solid;
@@ -237,23 +230,8 @@ a.anchor {
 
 /* User Dashboard */
 
-#user-dashboard-events-header{
-  text-align: center;
-}
-
 #user-dashboard-events-column{
   margin-top:0px;
-}
-
-.user-dashboard-event{
-  border-style: solid;
-  border-width: 1px;
-  border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-  margin-top: 10px;
-  background-color: white;
-  padding: 10px;
-
 }
 
 #user-dashboard-events-pagination{
@@ -265,27 +243,69 @@ a.anchor {
 }
 
 #user-dashboard-events-header{
+  text-align: center;
+  width:50vw;
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-  background-color: white;
+  background-color:#d6f1ff;
   border-radius: 7px 7px 0px 0px;
+  font-family: palatino;
+  font-size: 26px;
 }
 
 #user-dashboard-events-list{
-  max-height: 550px;
+  max-height: 70vh;
   overflow-y:scroll;
+  border-color:#D5D7DB;
+  background-color:white;
+  border-left-style:solid;
+  border-right-style: solid;
+  border-width:1px;
+  padding-bottom:2vh;
+}
+
+.user-dashboard-event{
+  margin-top: 2vh;
+  width: 40vw;
+  border-radius: 7px 7px 7px 7px;
+}
+
+.user-dashboard-event:hover .user-dashboard-event-header{
+  box-shadow: 3px 3px 7px #848f94;
+}
+
+.user-dashboard-event:hover .user-dashboard-event-body{
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: #c8cdd0;
+}
+
+.user-dashboard-event-header{
+  text-align:center;
+  border-width:1px;
+  border-color: #D5D7DB;
+  border-style: solid;
+  border-radius: 7px 7px 0px 0px;
+  background-color: #d6f1ff;
+  font-family:palatino;
+  font-style:bold;
+}
+
+.user-dashboard-event-body{
+  text-align:center;
+  background-color: #ebebeb;
+  border-radius: 0px 0px 7px 7px;
+  border-width: 1px;
+  border-color: #D5D7DB;
+  border-style: solid;
 }
 
 #user-dashboard-events-pagination{
   border-style: solid;
   border-width: 1px;
   border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
   background-color: white;
   border-radius: 0px 0px 7px 7px;
-  margin-top: 10px;
 }
 
 /*Breweries Index*/
@@ -357,80 +377,7 @@ a.anchor {
   cursor: pointer;
 }
 
-/*Brewery Show*/
-
-/*#brewery-show-header-column{
-  background-color: white;
-  border-left-style:solid;
-  border-right-style: solid;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-radius: 7px 7px 0px 0px;
-  text-align: center;
-  font-family: palatino;
-  padding-top: 10px;
-  border-width: 1px;
-  border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-}
-
-#brewery-show-picture-column{
-  background-color: white;
-  border-left-style:solid;
-  border-right-style: solid;
-  text-align: center;
-  border-width: 1px;
-  border-color: #D5D7DB;;
-  box-shadow: 3px 3px 7px #848f94;
-}
-#brewery-show-location-column{
-  background-color: white;
-  border-top-style: solid;
-  border-left-style:solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-}
-
-#brewery-show-location{
-  font-family: palatino;
-}
-
-#brewery-show-details-column{
-  background-color: white;
-  font-family: palatino;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-left-style:solid;
-  border-right-style: solid;
-  border-width: 1px;
-  border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-}
-
-#brewery-show-footer-column{
-  background-color: white;
-  border-left-style:solid;
-  border-right-style: solid;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-radius: 0px 0px 7px 7px;
-  font-family: palatino;
-  padding-top: 10px;
-  border-width: 1px;
-  border-color: #D5D7DB;
-  box-shadow: 3px 3px 7px #848f94;
-}
-
-#brewery-description-paragraph{
-margin: 0px;
-padding: 0px;
-}
-*/
-
-/*NEW BREWERY SHOW*/
+/*BREWERY SHOW*/
 
 #brewery-show-container{
   margin-top: 5vh;
@@ -518,7 +465,7 @@ padding: 0px;
 }
 
 .brewery-show-event-instance-body{
-  max-height:12vh;
+  max-height:15vh;
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
