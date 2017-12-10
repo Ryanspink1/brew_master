@@ -11,7 +11,7 @@ class Seed
   def initialize
     @token = ENV["FACEBOOK_TOKEN"]
     @breweries = {
-      "Avalanche Brewing Co" => 36572226900,
+      # "Avalanche Brewing Co" => 36572226900,
       "Avery Brewing Company" => 129355431997,
       "Baere Brewing Company" => 474757582560602,
       "Crooked Stave Artisan Beer Project" => 115432685183200,
