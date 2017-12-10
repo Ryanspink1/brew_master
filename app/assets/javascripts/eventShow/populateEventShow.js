@@ -3,10 +3,9 @@ function getEventShow(){
       url: `/api/v1${window.location.pathname}`,
       type: 'get',
       success: function(data){
-        // populateEventShow(data);
         getSanitationInfo(data);
-      }
-    })
+    }
+  })
 }
 
 function getSanitationInfo(eventInfo){
@@ -15,8 +14,8 @@ function getSanitationInfo(eventInfo){
       type: 'get',
       success: function(data){
         sanitize(eventInfo, data);
-      }
-    })
+    }
+  })
 }
 
 function sanitize(eventInfo, sanitationInfo){
