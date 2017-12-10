@@ -350,7 +350,7 @@ class Seed
                      url:         parsed[:website],
                      zip_code:    parsed[:location][:zip]
                      )
-        brewery.save
+        # brewery.save
       puts "created #{parsed[:name]} brewery!"
     end
     puts "brewery seed complete!"
