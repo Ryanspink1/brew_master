@@ -6,12 +6,13 @@ class Seed
     seed = Seed.new
     seed.destroy_data
     seed.populate_breweries
+    SeedEvent.start
   end
 
   def initialize
     @token = ENV["FACEBOOK_TOKEN"]
     @breweries = {
-      "Avalanche Brewing Co" => 36572226900,
+      # "Avalanche Brewing Co" => 36572226900,
       "Avery Brewing Company" => 129355431997,
       "Baere Brewing Company" => 474757582560602,
       "Crooked Stave Artisan Beer Project" => 115432685183200,
@@ -318,10 +319,6 @@ class Seed
     }
   end
 
-  def destroy_data
-    # Brewery.destroy_all
-  end
-
   # def populate_breweries
   #   CSV.foreach("./db/data/breweries.csv", :headers => true) do |row|
   #     Brewery.create!(row.to_hash)
@@ -334,8 +331,9 @@ class Seed
       response = Faraday.get("https://graph.facebook.com/v2.10/#{id}?fields=about%2Ccover%2Cdescription%2Cemails%2Cfounded%2Cgeneral_info%2Chours%2Clocation%2Cphone%2Cname%2Cwebsite&access_token=#{@token}")
       parsed = JSON.parse(response.body, symbolize_names: true)
       # Brewery.find_or_create_by([{
-      brewery = Brewery.find_by(fb_id: parsed[:id])
-      brewery.update_attributes(
+      # brewery = Brewery.find_by(fb_id: parsed[:id])
+      # brewery.update_attributes(
+      Brewery.create(
                      name:        parsed[:name],
                      fb_id:       parsed[:id],
                      phone:       parsed[:phone],
@@ -349,7 +347,7 @@ class Seed
                      url:         parsed[:website],
                      zip_code:    parsed[:location][:zip]
                      )
-        brewery.save
+        # brewery.save
       puts "created #{parsed[:name]} brewery!"
     end
     puts "brewery seed complete!"
