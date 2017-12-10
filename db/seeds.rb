@@ -6,6 +6,7 @@ class Seed
     seed = Seed.new
     seed.destroy_data
     seed.populate_breweries
+    SeedEvent.start
   end
 
   def initialize
@@ -316,10 +317,6 @@ class Seed
       "Zephyr Brewing Co" => 612432528777314,
       # "Gunbarrel Brewing CO" => 414035545366325
     }
-  end
-
-  def destroy_data
-    # Brewery.destroy_all
   end
 
   # def populate_breweries
