@@ -1,21 +1,36 @@
 <%= render 'navbar/navbar_home_index' %>
-<div class="container">
-  <div class="jumbotron">
-    <div class="row">
-      <div class ="col-md-7">
-        <h2 align=center>Login</h2></br>
-          <div class="caption" align=center>
+<div class="container" id="login-page-container">
+  <div class="row justify-content-center">
+    <div class ="col">
+    </div>
+    <div class="col">
+      <div id="login-form-container">
+        <div id="login-form-header">
+          Please Login
+        </div>
+        <div id="login-form-body">
+          <div id="login-form">
             <%= form_for :session, url: login_path do |f|  %>
-             <%= f.label "email" %></br>
-             <%= f.email_field :email, placeholder: "email" %></br>
-             <%= f.label "password" %></br>
-             <%= f.password_field :password, placeholder: "password" %></br>
-             <%= f.submit "Login" %></br>
+              <span style="margin-top:2vh; display:block;"><%= f.email_field :email, placeholder: "email" %></span>
+              <span style="margin-top:2vh; display:block;"><%= f.password_field :password, placeholder: "password" %></span>
+              <span style="margin-top:2vh; display:block;"><%= f.submit "Login" %></span>
             <% end %></br>
-          </div></br>
-   <p align=center><a id="create-account-button" class="btn btn-success btn-lg" href="/users/new" role="button">Create Account</a></p>
-
+          </div>
+        </div></br>
       </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class ="col">
+    </div>
+    <div class="col" style=" width:7vw;">
+      <div id="login-page-sign-up-button" onclick="window.location = `/users/new`;">
+        Sign Up!
+      </div>
+    </div>
+    <div class ="col">
     </div>
   </div>
 </div>

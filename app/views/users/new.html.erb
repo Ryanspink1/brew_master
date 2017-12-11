@@ -1,21 +1,39 @@
 <%= render 'navbar/navbar_home_index' %>
 <div class="container">
-  <div class="jumbotron">
-    <div class="row">
-      <div class ="col-md-7">
-        <h2 align=center>Create New Account</h2></br>
-          <div class="caption" align=center>
-           <%= form_for @user do |f| %>
-            <p align=right>Email: <%= f.email_field :email, placeholder: "email" %></p>
-            <p align=right>First Name: <%= f.text_field :first_name, placeholder: "First Name" %></p>
-            <p align=right>Last Name: <%= f.text_field :last_name, placeholder: "Last Name" %></p>
-            <p align=right>Zip Code: <%= f.text_field :zip_code, placeholder: "Zip Code" %></p>
-            <p align=right>Password: <%= f.password_field :password, placeholder: "password" %></p>
-            <p align=right>Confirm: <%= f.password_field :password_confirmation, placeholder: "password_confirmation" %></p></br>
-            <h3 align=center><%= f.submit "Submit New Account" %></h3></br>
-          <% end %></br>
-          </div></br>
+  <div class="row justify-content-center">
+    <div class="col">
+    </div>
+    <div class ="col">
+      <div id="signup-form-container">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col">
+            <div id="singup-form">
+              <div id="signup-form-header">
+                Please Enter Info
+              </div>
+              <div id="signup-form-body">
+                <%= form_for @user do |f| %>
+                 <span class="signup-form-input"><%= f.email_field :email, placeholder: "Email" %></span>
+                 <span class="signup-form-input"><%= f.text_field :first_name, placeholder: "First Name" %></span>
+                 <span class="signup-form-input"><%= f.text_field :last_name, placeholder: "Last Name" %></span>
+                 <span class="signup-form-input"><%= f.text_field :zip_code, placeholder: "Zip Code" %></span>
+                 <span class="signup-form-input"><%= f.password_field :password, placeholder: "Password" %></span>
+                 <span class="signup-form-input"><%= f.password_field :password_confirmation, placeholder: "Confirm Password" %></span>
+                 <div id="signup-form-submit">
+                   <%= f.submit "Submit New Account" %>
+                 </div>
+               <% end %></br>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="col">
     </div>
   </div>
 </div>
