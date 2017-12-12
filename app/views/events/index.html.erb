@@ -1,4 +1,55 @@
 <%= render 'navbar/navbar_event_index' %>
+<a class="anchor" id="new-event-top"></a>
+
+  <div class="container" id="new-event-container">
+    <div class="row justify-content-center">
+      <div class="col">
+      </div>
+      <div class="col" id="new-event-column">
+        <div id="new-event-box">
+          <div id="new-event-header">
+            New Events
+          </div>
+          <div id="new-event-body">
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+
+<a class="anchor" id="current-event-top"></a>
+<div class="current-events">
+  <div class="container" id="current-event-container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col rounded" id="current-event-column">
+        <div id="current-event-box">
+          <div id="current-event-header">
+            <h2 id="current-event-heading">Events</u></h2>
+            <div id="date-navigation">
+              <i onclick="currentEventDateChange(-1)" class="fa fa-chevron-left" aria-hidden="true"></i>
+              <strong><span onclick="allEventsBrain()">  All  </span></strong>
+              <strong><span onclick="todayEventsBrain()">Today  </span></strong>
+              <i onclick="currentEventDateChange(1)" class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+            <div id="current-event-date-header-capsule" style="display:none">
+              <p id ="current-event-date-header"></p>
+            </div>
+          </div>
+          <div id="current-event-body">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
   $(document).ready(startGettingEvents())
 </script>
@@ -10,52 +61,3 @@
   })
   setTimeout(refreshScrollSpy, 1)
 </script>
-<a class="anchor" id="new-event-top"></a>
-<div class="new-events">
-  <div class="container" id="new-event-container">
-    <div class="row">
-      <div class="col">
-      </div>
-      <div class="col-7 rounded" id="new-event-column">
-        <div id="new-event-header">
-          <h2 id="new-event-heading"><u>New Events</u></h2>
-        </div>
-        <div id="new-event-list">
-          <ul class="list-group" id="new-events-list">
-          </ul>
-        </div>
-      </div>
-      <div class="col">
-      </div>
-    </div>
-  </div>
-</div>
-<a class="anchor" id="current-event-top"></a>
-<div class="current-events">
-  <div class="container" id="current-event-container">
-    <div class="row">
-      <div class="col">
-      </div>
-      <div class="col-7 rounded" id="current-event-column">
-        <div id="current-event-header">
-          <h2 id="current-event-heading"><u>Events</u></h2>
-          <div id="date-navigation">
-            <i onclick="currentEventDateChange(-1)" class="fa fa-chevron-left" aria-hidden="true"></i>
-            <strong><span onclick="allEventsBrain()">  All  </span></strong>
-            <strong><span onclick="todayEventsBrain()">Today  </span></strong>
-            <i onclick="currentEventDateChange(1)" class="fa fa-chevron-right" aria-hidden="true"></i>
-          </div>
-          <div id="current-event-date-header-capsule" style="display:none">
-            <p id ="current-event-date-header"></p>
-          </div>
-        </div>
-        <div id="current-event-list">
-          <ul class="list-group" id="current-events-list">
-          </ul>
-        </div>
-      </div>
-      <div class="col">
-      </div>
-    </div>
-  </div>
-</div>
