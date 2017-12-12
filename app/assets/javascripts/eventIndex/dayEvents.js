@@ -14,7 +14,7 @@ function allEventsBrain(){
 }
 
 function clearCurrentData(){
-  $('#current-events-list').empty()
+  $('#current-event-body').empty()
 }
 
 function getTodayEvents(){

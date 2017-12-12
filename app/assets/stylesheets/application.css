@@ -38,6 +38,9 @@ nav {
 #navbar-name{
 }
 
+/****************LOGIN PAGE*********************/
+
+
 #login-page-container{
   margin-top:20vh;
 }
@@ -89,6 +92,8 @@ nav {
   font-size: 20px;
 }
 
+/****************SIGNUP PAGE*********************/
+
 #signup-form-container{
   width:50vw;
   margin-top:15vh;
@@ -131,39 +136,87 @@ nav {
   height: 60px;
 }
 
-.new-events {
-  margin-top:80px;
+/****************EVENT INDEX*********************/
+
+
+#new-event-container {
+  margin-top:12vh;
 }
 
-#new-event-heading{
-  text-align: center;
+#new-event-box{
+  width:60vw;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  border-radius: 7px 7px 0px 0px;
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: white;
+
 }
 
 #new-event-header{
-  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
-  background-color: white;
+  border-radius: 7px 7px 0px 0px;
+  background-color: #d6f1ff;
+  font-size: 30px;
+  font-family: palatino;
+  font-weight:bold;
+}
+#new-event-body{
+  width:60vw;
 }
 
-#new-event-list{
-  max-height: 600px;
+#new-event-body{
+  max-height: 75vh;
   overflow-y:scroll;
+  padding-bottom:5vh;
+
 }
 
-#new-event-column{
+.new-event-list-event{
+  width:40vw;
+  margin-top:5vh;
+  cursor:pointer;
+}
+.new-event-list-event:hover .new-event-list-event-header {
+  box-shadow: 3px 3px 7px #848f94;
+  font-weight:bold;
+}
+.new-event-list-event:hover .new-event-list-event-body {
+  box-shadow: 3px 3px 7px #848f94;
+  background-color: #bfbfbf;
+  font-weight:bold;
+}
+.new-event-list-event-header{
+  text-align: center;
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
-  box-shadow: 3px 3px 7px #848f94;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: white;
+  background-color: #d6f1ff;
+  border-radius: 7px 7px 0px 0px;
 }
+.new-event-list-event-body{
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+  border-style: solid;
+  border-color: #D5D7DB;
+  border-width: 1px;
+  background-color: #e6e6e6;
+  border-radius: 0px 0px 7px 7px;
+  font-size:16px;
+}
+
 
 #new-event-container{
-  margin-bottom: 30px;
+  margin-bottom: 5vh;
 }
 
 #current-event-heading{
@@ -171,29 +224,36 @@ nav {
 }
 
 #current-event-header{
-  margin-bottom: 20px;
+  border-radius: 7px 7px 0px 0px ;
+  margin-bottom: 2vh;
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
+  background-color: #d6f1ff;
+  font-family:palatino;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
-#current-event-column{
+#current-event-body{
+  max-height: 75vh;
+  overflow-y:scroll;
+  padding-bottom:5vh;
+
+}
+
+#current-event-box{
+  width:60vw;
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
+  border-radius: 7px 7px 0px 0px;
   box-shadow: 3px 3px 7px #848f94;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: white;
 }
 
 #current-event-container{
   margin-top: 30px;
-}
-
-#current-event-list{
-  max-height: 600px;
-  overflow-y:scroll;
 }
 
 .list-group-item{
@@ -212,6 +272,8 @@ nav {
 #current-event-date-header-capsule{
   text-align: center;
 }
+
+/****************EVENT SHOW*********************/
 
 .event{
   margin-top: 10px;
