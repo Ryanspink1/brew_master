@@ -33,20 +33,26 @@ function sanitize(eventInfo, sanitationInfo){
 
 
 function populateEventShow(data){
-  $("#event-show-header").append(
-    `<h2>${data.name}</h2>`
+  $("#event-show-header-name").append(
+    `
+      <h2>${data.name}</h2>
+    `)
+  $("#event-show-header-place-and-time").append(
+    `
+      <span style="display:block;">at <a href="/breweries/${data.brewery_id}">${data.place}</a></span>
+      ${formatDateWithTime(new Date(data.start_time))}-${formatDateWithTime(new Date(data.end_time))}
+    `
   )
+
   $("#event-show-picture").append(
-    `<img id="event-cover-image" src=${data.cover} class="img-thumbnail" style="height:350px;">`
+    `
+      <img id="event-cover-image" src=${data.cover} class="img-thumbnail" style="height:350px;">
+    `
   )
   $("#event-show-location-place").append(
-    `<strong>Where:</strong> ${data.place}`
-  )
-  $("#event-show-location-start-time").append(
-    `<strong>Start Time:</strong> ${new Date(data.start_time)}`
-  )
-  $("#event-show-location-end-time").append(
-    `<strong>End Time:</strong> ${new Date(data.end_time)}`
+    `
+      <strong>Where:</strong> ${data.place}
+    `
   )
   $("#add-event-to-list-button").append(
     `<strong>Add Event to List:</strong>
