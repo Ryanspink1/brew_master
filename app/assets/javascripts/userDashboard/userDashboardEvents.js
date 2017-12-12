@@ -40,9 +40,10 @@ function populateUserDashboardEvents(page){
              <div class="user-dashboard-event-header">
               <a href=/events/${userEvents[i].id}>${userEvents[i].name}</a>
               <i id="removeEventButton" class="fa fa-calendar-minus-o fa-lg" aria-hidden="true" onclick="addEventToListFromDashboard('DELETE', ${userEvents[i].id}, ${i})"style="cursor: pointer; cursor: hand;"></i>
+              <span style="display:block;">at <a href="/breweries/${userEvents[i].brewer_id}">${userEvents[i].place}</a></span>
              </div>
              <div class="user-dashboard-event-body">
-               <p>${formatDate(new Date(userEvents[i].start_time))}-${formatDate(new Date(userEvents[i].end_time))}</p>
+               <span style="display:block;margin-bottom:1vh;">${formatDateWithTime(new Date(userEvents[i].start_time))}-${formatDateWithTime(new Date(userEvents[i].end_time))}</span>
                <p>${userEvents[i].description.substring(0,150)}...</p>
              </div>
           </div>
