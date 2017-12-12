@@ -7,10 +7,15 @@ class User < ApplicationRecord
   validates :email,
             :first_name,
             :last_name,
-            :zip_code, presence: true
+            :zip_code,
+
+            presence: true
+
   enum role:[:default, :admin]
 
-  validates :email, uniqueness: true
+  validates :email,
+
+            uniqueness: true
 
   def event_index
     events.where("end_time > ?", Time.now).order(:start_time)

@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/stympy/faker.git
+  revision: b6e179603644f2f74cb5bc581aac29194e1068ab
+  branch: master
+  specs:
+    faker (1.8.5)
+      i18n (~> 0.9.1)
+
+GIT
   remote: https://github.com/thoughtbot/shoulda-matchers.git
   revision: 4b160bd19ecca7f97d7ac22dccd5fde9b0da5a9f
   branch: rails-5
@@ -200,12 +208,12 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    uglifier (3.2.0)
+    uglifier (4.0.2)
       execjs (>= 0.3.0, < 3)
     valid_url (0.0.4)
       addressable
       rails
-    vcr (3.0.3)
+    vcr (4.0.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -232,6 +240,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   fabrication
+  faker!
   faraday
   figaro
   font-awesome-rails
