@@ -5,10 +5,16 @@ class Api::V1::UserEventsController <ApplicationController
   end
 
   def create
-    UserEvent.create_entry(current_user, params)
+    UserEvent.create_entry(current_user,event_params)
   end
 
   def destroy
-    UserEvent.delete_entry(current_user, params)
+    UserEvent.delete_entry(current_user, event_params)
+  end
+
+  private
+
+  def event_params
+    params.permit(:event_id)
   end
 end
