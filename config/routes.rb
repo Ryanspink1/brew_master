@@ -24,10 +24,12 @@ Rails.application.routes.draw do
         get "/modified_date_events", to: "modified_date_events#index"
         get "/brewery_events",       to: "brewery_events#index"
       end
-      resources :events,      only:  [:show]
-      resources :user_events, only:  [:index, :create]
-      resources :breweries,   only:  [:index, :show]
-      resource  :user_events, only:  [:destroy]
+      resources :events,           only:  [:show]
+      resources :user_events,      only:  [:index, :create]
+      resources :breweries,        only:  [:index, :show]
+      resource  :user_events,      only:  [:destroy]
+      resources :favorites,        only:  [:index]
+      resources :favorites_events, only: [:index]
     end
   end
 end
