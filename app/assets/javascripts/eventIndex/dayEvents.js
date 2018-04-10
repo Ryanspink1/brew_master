@@ -1,4 +1,3 @@
-
 function todayEventsBrain(){
   clearCurrentData()
   currentEventDate.date = new Date
