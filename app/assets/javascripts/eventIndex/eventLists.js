@@ -49,7 +49,7 @@ function populateNewEvents(data, passedEvent){
               <div class="new-event-list-event-header">
                 <a href="/events/${event.id}">${event.name}</a>
                 <span class="add-event-button ${event.id}" style="text-align:right; display:none">
-                  <i id="add-event-icon" class="fa fa-calendar-plus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'POST',${event.id})" style="cursor: pointer; cursor: hand;"></i>
+                  <i id="add-event-icon" class="fa fa-calendar-plus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'post',${event.id})" style="cursor: pointer; cursor: hand;"></i>
                 </span>
                 <span class="remove-event-button ${event.id}" style="align:right;  display:none;">
                   <i id="remove-event-icon" class="fa fa-calendar-minus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'DELETE', ${event.id})"style="cursor: pointer; cursor: hand;"></i>

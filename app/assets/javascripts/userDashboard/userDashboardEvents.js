@@ -11,8 +11,8 @@ function userDashboardEventsBrain(pageNumber){
       url: `/api/v1/user_events`,
       type: "get",
       success: function(data){
-        dashboardEventsData.response = data
-        dashboardShowPagination(pageNumber)
+        dashboardEventsData.response = data;
+        firstEventCheck(data, pageNumber);
       }
     })
 }
@@ -53,5 +53,32 @@ function populateUserDashboardEvents(page){
       </div>
       `
     )
+  }
+}
+
+function firstEventCheck(data, pageNumber){
+  if(data.length == 0){
+    $("#user-dashboard-events-list").append(
+      `
+      <div class="row justify-content-center">
+        <div class="col">
+        </div>
+        <div class="col">
+          <div class="user-dashboard-event">
+             <div class="user-dashboard-event-header">
+              No Events Currently in Dashboard
+             </div>
+             <div class="user-dashboard-event-body">
+              Please visit <a href="/events">events</a> page to add events to your dashboard!
+             </div>
+          </div>
+        </div>
+        <div class="col">
+        </div>
+      </div>
+      `
+    )
+  }else{
+    dashboardShowPagination(pageNumber);
   }
 }

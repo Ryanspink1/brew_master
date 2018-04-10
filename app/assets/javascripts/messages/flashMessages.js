@@ -9,12 +9,13 @@ var messageColor = {
 }
 
 function flash(method){
+  flashClear();
   $("#flash-message-insert").css({"color":`${messageColor[method]}`})
   $("#flash-message-insert").css({"border-style":`solid`})
   $("#flash-message-insert").append(
     messages[method]
   )
-  setTimeout(flashClear, 2000)
+  setTimeout(flashClear, 4000)
 }
 
 function flashClear(){
