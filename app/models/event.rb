@@ -27,7 +27,7 @@ class Event < ApplicationRecord
 
 
   def self.new_events
-    where(created_at: (Time.now - 24.hours)..Time.now).reverse
+    where(created_at: (Time.now - 24.hours)..Time.now).limit(100).reverse
   end
 
   def self.current_events
