@@ -77,13 +77,13 @@ function addToUserEvents(button, method, eventID){
       type: method,
       data:{event_id: eventID},
       success: function(data){
-        flash(method)
         resetShowButton(button, method, eventID)
       }
     })
 }
 
 function resetShowButton(button, method, eventID){
+  flash(method);
   if (method == "post"){
     $(`.add-event-button.${eventID}`).css({"display":"none"})
     $(`.remove-event-button.${eventID}`).css({"display":"inline"})

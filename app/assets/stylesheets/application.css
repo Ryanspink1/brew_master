@@ -282,7 +282,7 @@ nav {
 }
 
 #event-container{
-  /*box-shadow: 2px 1px 10px black;*/
+  margin-top:10%;
 }
 
 #event-show-header-column{
@@ -362,14 +362,18 @@ a.anchor {
 }
 
 .flash-message{
-  position:relative;
-  margin-top: 65px;
-  /*z-index: -1;*/
+  position:fixed;
+  margin-top: 5%;
+  z-index: 1;
+  left:40%;
+  right:40%;
+  width:20%;
 }
 
 #flash-message-insert{
   text-align: center;
-  z-index: -1;
+  background-color: white;
+  /*z-index: -1;*/
 }
 
 /* User Dashboard */
@@ -384,6 +388,11 @@ a.anchor {
   padding-right:0px;
   margin-right:0px;
 }*/
+
+.user-dashboard-events{
+  margin-top:10%;
+}
+
 
 #user-dashboard-events-column{
   margin-top:0px;
@@ -535,7 +544,7 @@ a.anchor {
 /*BREWERY SHOW*/
 
 #brewery-show-container{
-  margin-top: 5vh;
+  margin-top: 10%;
   width:60vw;
   border-radius: 7px 7px 7px 7px;
   box-shadow: 3px 3px 7px #848f94;
