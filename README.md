@@ -8,6 +8,7 @@ Follow these instructions to setup and serve Brew O'Clock locally.
 
 Clone & Setup environment:
 ```
+#terminal
 git clone https://github.com/Ryanspink1/brew_master.git
 cd brew_master
 bundle exec install
@@ -41,6 +42,9 @@ rake get_new_events
 
 Both of the previous rake tasks will output the status of their brewery and event creation in the terminal and notify upon completion.
 
+## Schema
+![alt text](https://i.imgur.com/gLJs91H.png)
+
 ## Testing
 
 Test suite may be run in the terminal:
@@ -52,8 +56,8 @@ rspec
 
 ## Built With
 - [Rails 5 Back-End](http://rubyonrails.org/)
-- [JavaScript populated front-end](https://www.javascript.com/)
-- [PostgreSQL database](https://www.postgresql.org/)
+- [JavaScript Populated Front-End](https://www.javascript.com/)
+- [PostgreSQL Database](https://www.postgresql.org/)
 
 
 ## Author
