@@ -44,7 +44,7 @@ class User < ApplicationRecord
   end
 
   def favorites_events
-    brewery_ids = User.find(4).get_favorites_ids ||=0
+    brewery_ids = get_favorites_ids ||= 0
     Rails.cache.fetch("user:#{id},breweries:#{brewery_ids}", expires_in: 10.minutes) do
       response = PostgresConnection.new.raw_sql(
         "

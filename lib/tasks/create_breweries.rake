@@ -1,15 +1,12 @@
 require 'rake'
 
-task :update_breweries => :environment do
-
-
-  require 'csv'
-
-  class Seed
+task :create_breweries => :environment do
+  class SeedBreweries
 
     def self.start
-      seed = Seed.new
-      seed.update_breweries
+      seed = SeedBreweries.new
+      seed.destroy_breweries
+      seed.get_breweries
     end
 
     def initialize
@@ -93,7 +90,7 @@ task :update_breweries => :environment do
         "Southern Sun Pub and Brewery" => 120934591253847,
         "Bristol Brewing Company" => 31651662505,
         "New Image Brewing Company" => 691905564288480,
-        # "Westfax Brewing Company" => 266861010172241,
+        "Westfax Brewing Company" => 266861010172241,
         "TRiNiTY Brewing" => 88679883986,
         "Dry Dock Brewing Company" => 98902488741,
         "Elevation Beer Company" => 151790678251578,
@@ -145,7 +142,7 @@ task :update_breweries => :environment do
         "Ratio Beerworks" => 292922367564921,
         "Red Mountain Brewing" => 113586805936045,
         "VisionQuest" => 1434605056839464,
-        # "Crystal Springs Brewing Co" => 373653759464,
+        "Crystal Springs Brewing Co" => 373653759464,
         "Floodstage Ale Works" => 307439812735490,
         "Moonlight Pizza & Brewpub" => 120154605275,
         "Zuni Street Brewing Company" => 235258596860508,
@@ -154,6 +151,7 @@ task :update_breweries => :environment do
         "Mash Lab Brewing" => 280354325680771,
         "Pagosa Brewing & Grill" => 66719310787,
         "Dad & Dude's Breweria" => 103961466326688,
+        # "Moffat Station" => 124449017640900,
         "Palisade Brewing Company" => 113124425395872,
         "Asher Brewing Company" => 165171255714,
         "Grossen Bart Brewery" => 302248493215675,
@@ -315,33 +313,45 @@ task :update_breweries => :environment do
       }
     end
 
-    def update_breweries
+    def destroy_breweries
+      puts "hello"
+      BreweryEvent.destroy_all
+      puts "BreweryEvents destroyed"
+      UserEvent.destroy_all
+      puts "UserEvents destroyed"
+      Event.destroy_all
+      puts "Events destroyed"
+      Favorite.destroy_all
+      puts "Favorites destroyed"
+      Brewery.destroy_all
+      puts "Breweries destroyed"
+    end
+
+    def get_breweries
       @breweries.each do |brewery, id|
         response = Faraday.get("https://graph.facebook.com/v2.10/#{id}?fields=about%2Ccover%2Cdescription%2Cemails%2Cfounded%2Cgeneral_info%2Chours%2Clocation%2Cphone%2Cname%2Cwebsite&access_token=#{@token}")
         parsed = JSON.parse(response.body, symbolize_names: true)
         sanitized = sanitize_brewery_data(parsed)
-        brewery = Brewery.find_by(fb_id: sanitized[:id])
-        brewery.update_attributes(
-                       name:        sanitized[:name],
-                       fb_id:       sanitized[:id],
-                       phone:       sanitized[:phone],
-                       address:     sanitized[:location][:street],
-                       city:        sanitized[:location][:city],
-                       state:       sanitized[:location][:state],
-                       email:       sanitized[:emails],
-                       about:       sanitized[:about],
-                       description: sanitized[:description],
-                       photo:       sanitized[:cover][:source],
-                       url:         sanitized[:website],
-                       zip_code:    sanitized[:location][:zip]
-                       )
-        if brewery.save
-          puts "Updated #{parsed[:name]} brewery!"
+        Brewery.new({
+                      name:        sanitized[:name],
+                      fb_id:       sanitized[:id],
+                      phone:       sanitized[:phone],
+                      address:     sanitized[:location][:street],
+                      city:        sanitized[:location][:city],
+                      state:       sanitized[:location][:state],
+                      email:       sanitized[:emails],
+                      about:       sanitized[:about],
+                      description: sanitized[:description],
+                      photo:       sanitized[:cover][:source],
+                      url:         sanitized[:website]
+                      })
+        if Brewery.save
+          puts "Created #{parsed[:name]} brewery"
         else
-          puts "Could not update #{brewery}"
+          puts "Could not create #{brewery}"
         end
       end
-      puts "Brewery Update Complete!"
+      puts "brewery seed complete!"
     end
 
     def sanitize_brewery_data(parsed)
@@ -356,5 +366,5 @@ task :update_breweries => :environment do
       parsed
     end
   end
-  Seed.start
+  SeedBreweries.start
 end

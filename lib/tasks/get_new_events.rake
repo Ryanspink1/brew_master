@@ -1,6 +1,5 @@
 require 'rake'
 
-
 task :get_new_events => :environment do
   class SeedEvent
     def initialize
@@ -14,6 +13,7 @@ task :get_new_events => :environment do
 
     def get_events
       Brewery.all.each do |brewery|
+        puts brewery.name
         response = Faraday.get("https://graph.facebook.com/v2.10/#{brewery.fb_id}/events?fields=id%2Ccover%2Cdescription%2Cstart_time%2Cend_time%2Cname%2Cplace&access_token=#{@token}")
         events = JSON.parse(response.body, symbolize_names: true)[:data]
         sanitize_events(brewery, events)
@@ -44,7 +44,6 @@ task :get_new_events => :environment do
            BreweryEvent.find_or_create_by(brewery_id: brewery.id, event_id: Event.where(fb_id: event[:id]).first.id)
         else
           brewery.events.create(fb_id:       event[:id],
-
                                 name:        event[:name],
                                 cover:       event[:cover][:source],
                                 description: event[:description],
@@ -56,8 +55,9 @@ task :get_new_events => :environment do
                                 state:       event[:place][:location][:state],
                                 brewery_id:  brewery.id.to_s)
         end
-       puts "created #{event[:name]}!"
+       puts "Created #{event[:name]}"
       end
+     puts "New event population complete!"
     end
   end
   SeedEvent.start
