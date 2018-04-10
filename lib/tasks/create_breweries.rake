@@ -332,7 +332,7 @@ task :create_breweries => :environment do
         response = Faraday.get("https://graph.facebook.com/v2.10/#{id}?fields=about%2Ccover%2Cdescription%2Cemails%2Cfounded%2Cgeneral_info%2Chours%2Clocation%2Cphone%2Cname%2Cwebsite&access_token=#{@token}")
         parsed = JSON.parse(response.body, symbolize_names: true)
         sanitized = sanitize_brewery_data(parsed)
-        Brewery.new({
+        brewery = Brewery.new({
                       name:        sanitized[:name],
                       fb_id:       sanitized[:id],
                       phone:       sanitized[:phone],
@@ -345,7 +345,7 @@ task :create_breweries => :environment do
                       photo:       sanitized[:cover][:source],
                       url:         sanitized[:website]
                       })
-        if Brewery.save
+        if brewery.save
           puts "Created #{parsed[:name]} brewery"
         else
           puts "Could not create #{brewery}"
