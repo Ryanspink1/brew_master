@@ -282,7 +282,7 @@ nav {
 }
 
 #event-container{
-  /*box-shadow: 2px 1px 10px black;*/
+  margin-top:10%;
 }
 
 #event-show-header-column{
@@ -358,32 +358,26 @@ a.anchor {
   display: block;
   position: relative;
   top: -80px;
-  /*visibility: hidden;*/
 }
 
 .flash-message{
-  position:relative;
-  margin-top: 65px;
-  /*z-index: -1;*/
+  position:fixed;
+  top:10%;
+  z-index: 1;
+  left:40%;
+  right:40%;
+  width:20%;
 }
 
 #flash-message-insert{
   text-align: center;
-  z-index: -1;
+  background-color: white;
 }
 
-/* User Dashboard */
-/*.nopadding{
-  padding-right:0 !important;
-  margin-right:0px !important;
-}*/
-/*.user-dashboard-events{
-  padding-right:0px;
+.user-dashboard-events{
+  margin-top:10%;
 }
-#user-dashboard-events-container{
-  padding-right:0px;
-  margin-right:0px;
-}*/
+
 
 #user-dashboard-events-column{
   margin-top:0px;
@@ -535,7 +529,7 @@ a.anchor {
 /*BREWERY SHOW*/
 
 #brewery-show-container{
-  margin-top: 5vh;
+  margin-top: 10%;
   width:60vw;
   border-radius: 7px 7px 7px 7px;
   box-shadow: 3px 3px 7px #848f94;
@@ -646,14 +640,10 @@ a.anchor {
 }
 
 #brewery-show-info-containter{
-  /*margin-top: 5vh;*/
-  /*max-height:50vh;*/
-  /*padding-bottom: 2vh;*/
   width: 60vw;
 }
 #brewery-show-info-content{
   margin-top: 5vh;
-  /*max-height:50vh;*/
   width: 60vw;
   border-radius: 7px 7px 7px 7px;
   box-shadow: 3px 3px 7px #848f94;
@@ -711,7 +701,6 @@ a.anchor {
 
 
 .brewery-show-info-instance-body{
-  /*max-height:12vh;*/
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;

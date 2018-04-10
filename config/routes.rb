@@ -29,7 +29,7 @@ Rails.application.routes.draw do
       resources :breweries,        only:  [:index, :show]
       resource  :user_events,      only:  [:destroy]
       resources :favorites,        only:  [:index]
-      resources :favorites_events, only: [:index]
+      resources :favorites_events, only:  [:index]
     end
   end
 end

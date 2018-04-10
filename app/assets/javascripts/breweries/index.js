@@ -36,9 +36,10 @@ function clearBreweryIndexPagination(){
 
 
 function populateBreweryIndex(page){
+  debugger;
   breweryIndexScrollToTop()
   clearBreweryIndex()
-  for(i=(0+40*page);i<(39+40*page);i++){
+  for(i=(0+40*page);i<(40+40*page);i++){
     $("#brewery-index-table").append(
       `
         <div class="row justify-content-center">
