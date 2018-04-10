@@ -358,12 +358,11 @@ a.anchor {
   display: block;
   position: relative;
   top: -80px;
-  /*visibility: hidden;*/
 }
 
 .flash-message{
   position:fixed;
-  margin-top: 5%;
+  top:10%;
   z-index: 1;
   left:40%;
   right:40%;
@@ -373,21 +372,7 @@ a.anchor {
 #flash-message-insert{
   text-align: center;
   background-color: white;
-  /*z-index: -1;*/
 }
-
-/* User Dashboard */
-/*.nopadding{
-  padding-right:0 !important;
-  margin-right:0px !important;
-}*/
-/*.user-dashboard-events{
-  padding-right:0px;
-}
-#user-dashboard-events-container{
-  padding-right:0px;
-  margin-right:0px;
-}*/
 
 .user-dashboard-events{
   margin-top:10%;
@@ -655,14 +640,10 @@ a.anchor {
 }
 
 #brewery-show-info-containter{
-  /*margin-top: 5vh;*/
-  /*max-height:50vh;*/
-  /*padding-bottom: 2vh;*/
   width: 60vw;
 }
 #brewery-show-info-content{
   margin-top: 5vh;
-  /*max-height:50vh;*/
   width: 60vw;
   border-radius: 7px 7px 7px 7px;
   box-shadow: 3px 3px 7px #848f94;
@@ -720,7 +701,6 @@ a.anchor {
 
 
 .brewery-show-info-instance-body{
-  /*max-height:12vh;*/
   border-style: solid;
   border-color: #D5D7DB;
   border-width: 1px;
