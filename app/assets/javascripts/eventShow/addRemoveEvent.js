@@ -11,6 +11,7 @@ function addEventToList(method, event_id){
 }
 
 function resetShowButtons(method){
+  flash(method)
   if (method == "post"){
     $("#add-event-to-list-button").css({"display":"none"})
     $("#remove-event-from-list-button").css({"display":"inline"})

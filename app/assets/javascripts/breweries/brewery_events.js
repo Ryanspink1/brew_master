@@ -42,7 +42,7 @@ function populateBreweryEvents(){
             <div class="brewery-show-event-instance-header">
               <a href="/events/${event.id}"><strong>${event.name}</strong></a>
               <span class="add-event-button ${event.id}" style="text-align:right; display:none">
-                <i id="add-event-icon" class="fa fa-calendar-plus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'POST',${event.id})" style="cursor: pointer; cursor: hand;"></i>
+                <i id="add-event-icon" class="fa fa-calendar-plus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'post',${event.id})" style="cursor: pointer; cursor: hand;"></i>
               </span>
               <span class="remove-event-button ${event.id}" style="align:right;  display:none;">
                 <i id="remove-event-icon" class="fa fa-calendar-minus-o fa-lg" aria-hidden="true" onclick="addToUserEvents(this, 'DELETE', ${event.id})"style="cursor: pointer; cursor: hand;"></i>
@@ -77,14 +77,14 @@ function addToUserEvents(button, method, eventID){
       type: method,
       data:{event_id: eventID},
       success: function(data){
-        // flash(method)
+        flash(method)
         resetShowButton(button, method, eventID)
       }
     })
 }
 
 function resetShowButton(button, method, eventID){
-  if (method == "POST"){
+  if (method == "post"){
     $(`.add-event-button.${eventID}`).css({"display":"none"})
     $(`.remove-event-button.${eventID}`).css({"display":"inline"})
   }else if (method =="DELETE"){
