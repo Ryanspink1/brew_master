@@ -1,24 +1,63 @@
-# README
+# Brew O'clock
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### About
+Brew O'Clock is an application built to better connect users to the vibrant brewery culture of Colorado. This application uses the [Facebook Graph API](https://developers.facebook.com/docs/graph-api) to collect new events from over 300 Colorado breweries every hour. Users are able to add and remove these events to and from their personal dashboard to keep track of events they are interested in attending.
 
-Things you may want to cover:
+## Getting Started Locally
+Follow these instructions to setup and serve Brew O'Clock locally.
 
-* Ruby version
+Clone & Setup environment:
+```
+git clone https://github.com/Ryanspink1/brew_master.git
+cd brew_master
+bundle exec install
+```
 
-* System dependencies
+Once bundled, the FACEBOOK_TOKEN environment variable will need to be set. Please retrieve your personal Facebook token from the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer) (*Facebook account required*).
 
-* Configuration
+Set Token:
 
-* Database creation
+```
+# config/application.yml
+FACEBOOK_TOKEN: #your_token
+```
 
-* Database initialization
+With the token configured, the database can now be created and populated via rake tasks.
+In your terminal:
 
-* How to run the test suite
+```
+#terminal
+rake db:create
+rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+And to populate with breweries and events:
 
-* Deployment instructions
+```
+#terminal
+rake create_breweries
+rake get_new_events
+```
 
-* ...
+Both of the previous rake tasks will output the status of their brewery and event creation in the terminal and notify upon completion.
+
+## Testing
+
+Test suite may be run in the terminal:
+
+```
+#terminal
+rspec
+```
+
+## Built With
+- [Rails 5 Back-End](http://rubyonrails.org/)
+- [JavaScript populated front-end](https://www.javascript.com/)
+- [PostgreSQL database](https://www.postgresql.org/)
+
+
+## Author
+Ryan Spink (2017 - Current)
+
+## License
+This project is licensed under the MIT License. 
