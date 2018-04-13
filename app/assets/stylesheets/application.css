@@ -459,8 +459,10 @@ a.anchor {
 
 /*Breweries Index*/
 
+
+
 #brewery-index-table-container{
-  margin-top: 5vh;
+  margin-top: 10%;
   width:60vw;
   border-radius: 7px 7px 7px 7px;
   box-shadow: 3px 3px 7px #848f94;
