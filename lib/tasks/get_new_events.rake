@@ -15,6 +15,7 @@ task :get_new_events => :environment do
       Brewery.all.each do |brewery|
         puts brewery.name
         response = Faraday.get("https://graph.facebook.com/v2.10/#{brewery.fb_id}/events?fields=id%2Ccover%2Cdescription%2Cstart_time%2Cend_time%2Cname%2Cplace&access_token=#{@token}")
+        binding.pry
         events = JSON.parse(response.body, symbolize_names: true)[:data]
         sanitize_events(brewery, events)
       end

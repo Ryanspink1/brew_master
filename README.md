@@ -1,5 +1,8 @@
 # Brew O'clock
 
+## Please Note:
+As of April 11, 2018 Facebook has restricted access to the "Page Events" portion of their Graph API. Applications will not be granted access until an audit has been completed on the application. App submissions are not yet open and as such Brew O'Clock will not be able to add new events until permission has been granted. 
+
 ### About
 Brew O'Clock is an application built to better connect users to the vibrant brewery culture of Colorado. This application uses the [Facebook Graph API](https://developers.facebook.com/docs/graph-api) to collect new events from over 300 Colorado breweries every hour. Users are able to add and remove these events to and from their personal dashboard to keep track of events they are interested in attending.
 
@@ -64,4 +67,4 @@ rspec
 Ryan Spink (2017 - Current)
 
 ## License
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.
